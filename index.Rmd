@@ -1,0 +1,37 @@
+---
+title: "lecture11exercise"
+author: "Sydney"
+date: "11/5/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, include = FALSE}
+library("knitr")
+source("exercise.R")
+```
+## Chapter 11 Practice with R Markdown
+
+
+
+### Table of average **arrival** delays by destination:
+```{r, echo = FALSE}
+kable(arr_delay_by_dest)
+```
+
+### Table of average **departure** delays by month:
+```{r, echo = FALSE}
+kable(dep_delay_by_month)
+```
+
+
+### Plot of departure delays by month
+``` {r, echo = FALSE}
+plot(dep_delay_by_month)
+```
+
+According to the dataset, month `r max_avg_dep_delay` had the greatest 
+average departure delay.
